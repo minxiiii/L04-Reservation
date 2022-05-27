@@ -49,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "the button is clicked", Toast.LENGTH_SHORT).show();
                 String textName = "Name:" + name.getText().toString();
                 String textHp = "Phone number: " + hp.getText().toString();
                 String textPax = "Pax:" + pax.getText().toString();
@@ -64,15 +63,15 @@ public class MainActivity extends AppCompatActivity {
                 String textTime = "Time is" + hour + ":" + min;
 
 
-                tvDisplay.setText(textName);
-                tvDisplay.setText(textHp);
-                tvDisplay.setText(textPax);
-                tvDisplay.setText(textDay);
-                tvDisplay.setText(textTime);
+                Toast.makeText(MainActivity.this,textName , Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, textHp, Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,textPax , Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, textDay, Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,textTime , Toast.LENGTH_SHORT).show();
 
                 String value = ((RadioButton) findViewById(area.getCheckedRadioButtonId()))
                         .getText().toString();
-                tvDisplay.setText(value);
+                Toast.makeText(MainActivity.this,value , Toast.LENGTH_SHORT).show();
 
             }
         });
